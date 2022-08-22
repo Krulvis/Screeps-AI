@@ -22,6 +22,7 @@ val screepsUser: String? by project
 val screepsPassword: String? by project
 val screepsToken: String? by project
 val screepsHost: String? by project
+val localFolder: String? by project
 val screepsBranch: String? by project
 val screepsServer: String? by project
 val screepsSkipSslVerify: Boolean = false
@@ -73,7 +74,7 @@ tasks.register("deploy-local") {
                 rename(project.name, "main")
                 include("**/*.js")
             }
-            into("C:\\Users\\jkleinte\\AppData\\Local\\Screeps\\scripts\\screeps.com\\$branch")
+            into("$localFolder\\$branch")
         }
     }
 }

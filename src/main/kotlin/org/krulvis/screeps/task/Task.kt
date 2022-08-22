@@ -1,4 +1,8 @@
 package org.krulvis.screeps.task
 
-class Task() {
+class Objective() {
+
+}
+
+class Task(val objective: Objective) {
 }
